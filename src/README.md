@@ -3,10 +3,12 @@ home: true
 layout: BlogHome
 icon: home
 title: 博客主页
-heroImage: /logo.svg
+# heroImage: /logo.svg
+heroImage: /assets/images/author-circal.png
+bgImage: /assets/images/backgrounds.jpg
 heroText: 斑鳩的 BLOG
 heroFullScreen: true
-tagline: 抓住每一道一閃即逝的想法
+tagline: 抓住每一個一閃即逝
 projects:
   - icon: project
     name: 项目名称
