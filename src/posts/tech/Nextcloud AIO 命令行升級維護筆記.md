@@ -1,24 +1,27 @@
 ---
 author: Benny Chou
-icon: square-to-square
+icon: blog
 date: 2024-02-08
 category:
-  - 部落格
+  - 技術
 tag:
   - 伺服器
-  - 技術
   - nextcloud
   - docker
   - proxmox
-sticky: true
+sticky: false
 ---
 
 # Nextcloud AIO 命令行升級維護筆記
 
-過年時除舊佈新整理房間時，因為移動了 Server 的位置，在重啟服務遇到需要手動更新的狀況
+過年時除舊佈新整理房間時
+
+因為移動了 Server 的位置，在重啟服務遇到需要手動更新的狀況
 <!-- more -->
+
 關機後重啟服務後，發現 Nextcloud 強制要求更新，我猜是因為我使用的 docker-compose 指定最新版本導致
-由於 Nextcloud 直接進入維護鎖定模式，所以只能進入容器中使用 CLI 來手動更新了
+
+因此 Nextcloud 直接進入維護鎖定模式，所以只能進入容器中使用 CLI 來手動更新了
 
 ## 安裝背景
 proxmox 平台中的一個 CT 中，用 Nextcloud AIO 自動部屬和控制所需的其他容器
@@ -42,20 +45,24 @@ php updater/updater.phar --no-interaction --no-backup && php occ app:enable next
 # Switch back to the stable channel
 php occ config:system:set updater.release.channel --value=stable
 ```
-依照 github 說明，第二步驟的 updater 可以多執行幾次，該命令一次只會升級一個小版本，等到不會升級後在進行下一步
-但我這次只執行一次就升到版本 27 的最新版本了，第二次就說不需升級
+依照 github 說明，第二步驟的 updater 可以多執行幾次
+
+該命令一次只會升級一個小版本，等到不會升級後在進行下一步
+
+但我這次只執行一次就升到版本 27 的最新版本了，第二次執行就會直接結束
 
 2. 升級 app
 如果要繼續升級到版本 28，這次需要先進行 app 升級
 ```bash
-# 以下指令需要在 nextcloud 容器內執行
+# 以下指令需要在 nextcloud 的 docker 容器內執行
 
 php occ upgrade
 ```
 通常會在這邊遇到錯誤，特別是如果安裝了一些有的沒有的額外 app
+
 這時可以查看錯誤 log，鎖定沒辦法更新的 app 名稱，然後使用 occ 命令停用該 app
 ```bash
-# 以下指令需要在 nextcloud 容器內執行
+# 以下指令需要在 nextcloud 的 docker 容器內執行
 
 # 列出所有 app 名單
 php occ app:list
@@ -65,13 +72,13 @@ php occ app:disable $appname
 ```
 停用之後再次運行，應該就沒問題了
 ```bash
-# 以下指令需要在 nextcloud 容器內執行
+# 以下指令需要在 nextcloud 的 docker 容器內執行
 
 php occ upgrade
 ```
 升級完成之後可以進行步驟 1 再次進行主程式升級
 
 3. 反覆步驟 1~2，可以一步步將版本升級至最新版本
+4. 完成主程式的更新會自動解除維護模式，就可以正常使用 Nextcloud 了
 ## 補充資料
-- 完成主程式的更新會自動解除維護模式，就可以正常使用 Nextcloud 了
 - [Nextcloud 用 OCC 指令表 (ownCloud Console)](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html)
