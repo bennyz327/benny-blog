@@ -1,5 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
+import { removeHtmlExtensionPlugin } from "vuepress-plugin-remove-html-extension";
 
 export default defineUserConfig({
   base: "/benny-blog/",
@@ -18,6 +19,10 @@ export default defineUserConfig({
   },
 
   theme,
+
+  plugins:[
+    removeHtmlExtensionPlugin(),
+  ]
 
   // Enable it with pwa
   // shouldPrefetch: false,
