@@ -1,13 +1,23 @@
 import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
-  "/",
+  // "/",
   // "/demo/",
   {
-    text: "文章",
+    text: "首頁",
+    link: "/",
+    icon: "home",
+  },
+  {
+    text: "文章分類",
     icon: "pen-to-square",
-    prefix: "/posts/",
+    prefix: "/category/",
     children: [
+      {
+        text: "技術",
+        icon: "blog",
+        link: "技術",
+      },
     //   {
     //     text: "苹果",
     //     icon: "pen-to-square",
@@ -42,14 +52,6 @@ export const zhNavbar = navbar([
     //   { text: "火龙果", icon: "pen-to-square", link: "dragonfruit" },
     //   "tomato",
     //   "strawberry",
-      {
-        text: "技術",
-        icon: "blog",
-        prefix: "tech/",
-        children: [
-          "Nextcloud AIO 命令行升級維護筆記"
-        ],
-      },
     ],
   },
   // {
