@@ -20,6 +20,7 @@ export default defineUserConfig({
 
   theme,
 
+  // 新增這個外掛後後直些訪問 /benny-blog/posts/資料夾 的網頁中，原本會顯示文章列表，現在會是空的
   plugins:[
     removeHtmlExtensionPlugin(),
   ]
