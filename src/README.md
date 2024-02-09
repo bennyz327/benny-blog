@@ -44,6 +44,4 @@ footer: Kaohsiung City Taiwan
 # (可以放在 META 區塊外面的) 相关配置文档请见 [博客主页](https://theme-hope.vuejs.press/zh/guide/blog/home/)。
 ---
 
-沒有更多內容
-
-回[首頁](https://bennyz327.github.io/benny-blog/)
+沒有更多內容了 返回[首頁](https://bennyz327.github.io/benny-blog/)
