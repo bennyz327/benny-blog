@@ -25,7 +25,7 @@ export default hopeTheme({
 
   blog: {
     medias: {
-      GitHub: "https://example.com",
+      GitHub: "https://github.com/bennyz327",
       Email: "mailto:bennyz327@gmail.com",
       // Baidu: "https://example.com",
       // BiliBili: "https://example.com",

@@ -1,7 +1,8 @@
 ---
 author: Benny Chou
 icon: circle-info
-cover: /assets/images/cover3.jpg
+date: 2023-11-24
+# cover: /assets/images/cover3.jpg
 ---
 
 # 周柏寰
