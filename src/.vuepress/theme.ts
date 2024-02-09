@@ -127,6 +127,14 @@ export default hopeTheme({
     //   provider: "Waline",
     //   serverURL: "https://waline-comment.vuejs.press",
     // },
+    comment: {
+      provider: "Giscus",
+      repo: "bennyz327/benny-blog",
+      repoId: "R_kgDOKxpSkQ",
+      category: "Announcements",
+      categoryId: "DIC_kwDOKxpSkc4CdFJ0",
+      mapping: "title",
+    },
 
     // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
