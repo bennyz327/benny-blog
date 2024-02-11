@@ -24,8 +24,8 @@ export const zhSidebar = sidebar({
         },
         {
           text: "雜項",
-          prefix: "posts/misc/",
-          children: ["20231125_1"],
+          prefix: "misc/",
+          children: "structure",
         },
       ]
     },
