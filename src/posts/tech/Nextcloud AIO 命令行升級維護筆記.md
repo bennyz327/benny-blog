@@ -10,6 +10,12 @@ tag:
   - docker
   - proxmox
 sticky: false
+article: true
+timeline: true
+#SEO
+title: Nextcloud AIO 命令行升級維護筆記
+description: 因為移動了 Server 的位置 在重啟服務遇到需要手動更新的狀況
+image: /assets/images/author-nobackground.png
 ---
 
 # Nextcloud AIO 命令行升級維護筆記

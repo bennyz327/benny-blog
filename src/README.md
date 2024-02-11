@@ -2,12 +2,14 @@
 home: true
 layout: BlogHome
 icon: home
-title: 博客主页
-# heroImage: /logo.svg
 heroImage: /assets/images/author-circal.png
 bgImage: /assets/images/backgrounds.jpg
 heroText: 斑鳩的 BLOG
 heroFullScreen: true
+# SEO
+title: 斑鳩的窩
+image: /assets/images/author-nobackground.png
+banner: /assets/images/backgrounds.jpg
 tagline: 抓住每一個一閃即逝
 projects:
   - icon: project
@@ -44,4 +46,4 @@ footer: Kaohsiung City Taiwan
 # (可以放在 META 區塊外面的) 相关配置文档请见 [博客主页](https://theme-hope.vuejs.press/zh/guide/blog/home/)。
 ---
 
-沒有更多內容了 返回[首頁](https://bennyz327.github.io/benny-blog/)
+返回[首頁](https://bennyz327.github.io/benny-blog/)
