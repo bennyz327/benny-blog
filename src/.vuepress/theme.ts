@@ -98,7 +98,8 @@ export default hopeTheme({
 
       blog: {
         description: "後端開發者",
-        intro: "/zh/intro.html",
+        intro: "/intro",
+        // intro: "/intro.html",
       },
 
       author: "Benny Chou",
@@ -111,10 +112,10 @@ export default hopeTheme({
   },
 
   encrypt: {
-    config: {
-      "/demo/encrypt.html": ["1234"],
-      "/zh/demo/encrypt.html": ["1234"],
-    },
+    // config: {
+    //   "/demo/encrypt.html": ["1234"],
+    //   "/zh/demo/encrypt.html": ["1234"],
+    // },
   },
 
   plugins: {
