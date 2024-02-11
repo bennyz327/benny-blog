@@ -19,13 +19,13 @@ export const zhSidebar = sidebar({
       children: [
         {
           text: "技術",
-          prefix: "posts/tech/",
+          prefix: "tech/",
           children: "structure",
         },
         {
           text: "雜項",
           prefix: "posts/misc/",
-          children: "structure",
+          children: ["20231125_1"],
         },
       ]
     },
