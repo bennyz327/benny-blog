@@ -11,6 +11,7 @@ title: 斑鳩的窩
 image: /assets/images/author-nobackground.png
 banner: /assets/images/backgrounds.jpg
 tagline: 抓住每一個一閃即逝
+
 projects:
   - icon: project
     name: Gallexiv
