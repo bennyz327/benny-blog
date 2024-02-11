@@ -10,12 +10,24 @@ export const zhSidebar = sidebar({
     //   link: "demo/",
     //   children: "structure",
     // },
+    // "intro",
     {
       text: "文章",
       icon: "book",
       prefix: "posts/",
-      children: "structure",
+      // children: "structure",
+      children: [
+        {
+          text: "技術",
+          prefix: "posts/tech/",
+          children: "structure",
+        },
+        {
+          text: "雜項",
+          prefix: "posts/misc/",
+          children: "structure",
+        },
+      ]
     },
-    "intro",
   ],
 });
